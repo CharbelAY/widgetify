@@ -1,8 +1,24 @@
 {
-  "main-container":{
-    "width":"100%",
-    "height":"150px",
-    "background-color":"blue",
-    "padding": "10px"
+  "main-container": {
+    "styles": {
+      "width": "50%",
+      "height": "150px",
+      "background-color": "blue",
+      "padding": "10px"
+    },
+    "events": {
+      "click":{
+        "function": "animateWith",
+        "argument": "translationFifty"
+      }
+    }
+  },
+  "animations": {
+    "translationFifty": {
+      "keyframe": "@keyframes translationFifty {\n  0%   {transform: translate(0px, 0px);background-color:purple;}\n  50% {transform: translate(50px, 50px); background-color:blue;}\n  100% {transform: translate(0px, 0px);}\n}",
+      "animation-users": [
+        "main-container"
+      ]
+    }
   }
 }
